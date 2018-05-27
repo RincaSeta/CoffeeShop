@@ -1,0 +1,29 @@
+html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+.container:after,
+.container:before,
+.row:after,
+.row:before{
+    content: "";
+    display: table;
+}
+
+.container:after,
+.row:after,
+.clearfix{
+    clear: both;
+}
+
+body{
+    width: 100%;
+}
