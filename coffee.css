@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Mono|Source+Serif+Pro');
+@import url('https://fonts.googleapis.com/css?family=Markazi+Text');
+
 html{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    height: 100%;
 }
   
 *,
@@ -27,6 +33,17 @@ html{
 body{
     border: 2px solid black;
     width: 100%;
+    height: 100%;
+}
+
+.pageContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.row{
+    padding: 0;
+    margin: 0;
 }
 
 /**▬▬▬▬ஜ۩۞۩ஜ▬▬­­­­­­­­­▬▬▬**­/
@@ -34,5 +51,641 @@ body{
 /**▬▬▬▬ஜ۩۞۩ஜ▬▬­­­­­­­­­▬▬▬**/
 
 @media only screen and (min-width: 320px){
+
+/**HOME PAGE**/
+
+    #homepage{
+        height: 100%;
+        background: url("img/header5.jpg");
+        background-attachment: relative;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        text-align: center;
+        color: #fff;
+    }
    
+/**NAVIGATION**/
+    .navbar{
+        text-transform: uppercase;
+        position: fixed;
+        width: 100%;
+        margin: -5px;
+        padding: 0;
+        background-color: rgb(38, 38, 38) !important;
+        z-index: 1000;
+    }
+    .navbar li{
+        padding: 7px 10px;
+    }
+
+    .navbar a:hover,
+    .navbar-nav .active a{
+        color: #f6ab4a !important;
+    }
+
+    .navbar a{
+        color: #fff !important;
+    }
+
+    .nav-item:hover > .dropdown-menu{
+        display: block;
+        background: rgb(38, 38, 38);
+        border: none;
+        text-align: center;
+    }
+
+    .dropdown-menu a:hover{
+       background: rgba(38, 38, 38, 0.7);
+    }
+
+    .nav-item > .dropdown-toggle:active{
+        pointer-events: none;
+    }
+
+    .nav-item > .dropdown-menu {
+        padding: 0;
+        margin: 0 !important;
+    }
+
+    /**HEADER TITLE**/
+    .headerTitle{
+        height: 100%;
+        padding: 30% 20px;
+    }
+
+    .headerTitle h1{
+        color: #ca8b38;
+        font-family: 'Source Serif Pro', serif;
+        text-shadow: 1px 2px 8px #000;
+    }
+
+    .headerTitle h5{
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1em;
+        letter-spacing: 1px;
+        line-height: 1.6;
+    }
+
+    .btn{
+        background: #ca8b38;
+        border: none;
+    }
+
+    .btn:hover{
+        background: #f6ab4a;
+    }
+
+    /***SECTION WHO***/
+    section{
+        padding: 100px 0;
+    }
+
+    #who{
+        padding: 110px 0 90px 0 !important;
+        background: #eee;
+        font-family:'Roboto Mono', monospace;
+        height: auto;
+        margin: 0;
+    }
+
+    .who-imgs{
+        display: flex;
+    }
+
+    .who-img{
+        padding: 10px 12px ;
+    }
+
+    .who-img img{
+        width: 100%;
+    }
+
+    .who-content{
+        padding: 20px 10%;
+        text-align: center;
+    }
+
+    .section-title{
+        font-family: 'Roboto Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .section-content{
+        margin: 30px 0;
+        font-family: 'Roboto Mono', monospace;
+        text-align: center;
+    }
+
+    .section-title h2{
+        font-weight: bold;
+    }
+
+    /***SECTION SERVICES***/
+    .ourservice {
+		position: relative;
+        background-color: rgba(0,0,0,0.6);
+        overflow: hidden;
+        color: #fff;
+        padding: 0;
+    }
+    
+    .ourservice:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.5;
+		background: url(img/header2.jpg);
+		background-size: cover;
+		background-position: top center;
+    }
+
+    .service-content{
+        text-align: center;
+        padding: 150px 7% 100px 15%;
+        background: #8c6344;
+    }
+
+    .types{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .cftype{
+        padding: 30px 5%;
+        height: 50%;
+    }
+
+    .type-title h5{
+        margin: 20px 0;
+    }
+
+    .type-title a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .type-title a:hover{
+        color: #ca8b38;
+    }
+
+    /***SECTION PUBLIC PRODUCT***/
+    #public{
+        margin: 0;
+    }
+
+    .product-list{
+        margin-top: 100px;
+    }
+
+    .products{
+        position: relative;
+        border: 1px solid #ddd;
+    }
+
+    .products img{
+        width: 100%;
+    }
+
+    .name,
+    .price{
+        font-weight: bold;
+    }
+
+    .control{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+    }
+
+    .products:hover .control{
+        opacity: 1;
+    }
+
+    .control .view,
+    .control .cart{
+        cursor: pointer;
+        border: 1px solid #8c6344;
+        padding: 5px;
+        background: #ca8b38;
+        color: #fff;        
+    }
+
+    .control .view:hover,
+    .control .cart:hover{
+        background: #f6ab4a;
+    }
+
+     /** Product Modal **/
+     .displayNone{
+        display: none;
+    }
+
+    .product-modal{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right:0;
+        padding: 30px 5%;
+        z-index: 1000;
+        background: rgba(0,0,0,0.7);
+        cursor: auto;
+    }
+
+    .myModal{
+        border: 1px solid gray;
+        background: #fff;
+        height: 100%;
+        overflow: scroll;
+        display: relative;
+        box-shadow: 1px 1px 35px #000;
+    }
+
+    .btn-close{
+        position: absolute;
+        top: -15px;
+        right: 4.4%;
+        border: none;
+        background: transparent;
+        font-size: 2em;
+        cursor: pointer;
+        color: #999;
+    }
+
+    .btn-close:hover{
+        color: #fff;
+    }
+
+    .modal-title{
+        color: #7e4c4f;
+        font-family: 'Fredoka One', cursive;
+        font-size: 2em;
+    }
+    
+    .modal-info{
+        text-align: justify;
+        padding: 2% 3%;
+    }
+
+    .product-price{
+        margin-left: 30px;
+        color: #7e4c4f;
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.5em;
+    }
+
+    .modal-amount{
+		margin-top: 20px;
+        padding: 10px;
+    }
+    
+    .amout-name{
+        margin-right: 70px;
+    }
+	
+	.amount-input{
+		width: 50px;
+		height: 30px;
+		text-align: center;
+		margin: 0;
+	}
+	
+	input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button{
+		margin: 0;
+	}
+	
+	.change-value{
+		display: inline-block;
+		border: 1px solid #ddd;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		background-color: #ddd;
+		margin: 0;
+		cursor: pointer;
+    }
+    
+    .addcart button{
+        margin-left: 10px;
+        border: none;
+        background: #eee;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .addcart button:hover{
+        background: #ddd;
+    }
+
+    /***SECTION PRODUCT***/
+    .ourproduct {
+		position: relative;
+        background-color: rgba(0,0,0,0.6);
+        overflow: hidden;
+        color: #fff;
+        padding: 10%;
+    }
+    
+    .ourproduct:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.5;
+		background: url(img/header4.jpg);
+		background-size: cover;
+		background-position: top center;
+    }
+
+    .card{
+        padding: 0 13px;
+        margin: 25px 0;
+        background: transparent;
+    }
+
+    .card-img-top{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .card-body{
+        margin: 0;
+        padding: 15% 5%;
+        text-align: center;
+        background: #fff;
+        transition: all 1s;
+    }
+
+    .card-body:hover{
+        background: #ddd;
+    }
+
+    .card-body a{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .card-body a:hover{
+        color: #ca8b38;
+    }
+
+    .product-title{
+        color: #000;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .product-intro{
+        color: #999;
+    }
+
+    .card-body:hover .product-intro{
+        color: #8c6344;
+    }
+
+    .viewall{
+        width: 100%;
+        text-align: center;
+    }
+
+    /***SECTION FEEDBACK***/
+    #feedback{
+        text-align: center;
+    }
+    
+    #feedback .carousel-indicators img{
+        border-radius: 50%;
+        width: 70px;
+        border: 3px solid #fff;
+        box-shadow: 2px 2px 5px #000;
+    }
+    
+    #feedback .carousel-indicators .active{
+        background: transparent;
+    }
+    
+    #feedback .carousel-indicators .active img{
+        width: 100px;
+    }
+
+    #feedback .sentences{
+        text-align: center;
+        position: relative;
+        padding: 40px 15%;
+    }
+
+    #feedback .carousel-indicators{
+        position: relative;
+        top: 50px
+    }
+
+    #feedback .fa-quote-left{
+        font-size: 2em;
+        color: #ddd;
+        margin-right: 10px;
+    }
+
+    #feedback .author{
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    /**FOOTER**/
+    footer{
+        background-color: #ededed;
+
+    }
+
+    footer .row{
+        padding: 3% 5%;
+    }
+
+    .fter{
+        padding: 15px;
+    }
+
+    .fter .section-title h2{
+        font-size: 1.1em;
+        padding: 20px 0;
+        text-align: justify;
+        padding: 0 30px;
+    }
+
+    footer .section-content{
+        text-align: justify;
+        color: #868080;
+        font-family: 'Merriweather', serif;
+        padding: 0 30px;
+    }
+
+    footer .aboutus .section-content{
+        padding: 0 15px;
+    }
+
+    .fter p{
+        margin: 5px;
+    }
+
+    /**SOCIAL**/
+    .social{
+        text-align: center;
+        display: flex;
+    }
+
+	.social-icon{
+		color: rgb(121, 119, 119);
+		padding: 5px;
+        font-size: 1.2em;
+    }
+
+    .social-icon:hover{
+        color: #8c6344;
+    }
+
+    /**LINK, ACCOUNT, SERVICES**/
+    .links a,
+    .account a,
+    .services a{
+        display: block;
+        text-decoration: none;
+        color: #868080;
+        line-height: 1.8;
+        transition: all 0.5s ease-in;
+		-webkit-transition: all 0.5s ease-in;
+		-o-transition: all 0.5s ease-in;
+		-ms-transition: all 0.5s ease-in;
+		-moz-transition: all 0.5s ease-in;
+    }
+
+    .links a:hover,
+    .account a:hover,
+    .services a:hover{
+        color: #ca8b38;
+        text-shadow: 2px 2px 15px #ca8b38;
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -o-transform: translateX(10px);
+        -moz-transform: translateX(10p);
+        -ms-transform: translateX(10px);
+        font-weight: bold;
+    }
+
+    /**CONTACT**/
+    .contact p{
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .phone,
+    .mail,
+    .address{
+        text-align: justify;
+        width: 100%;
+    }
+
+    /**COPYRIGHT**/
+    .copyright{
+		border: 1px solid #ddd;
+		background-color: #ddd;
+        color: #999;
+        display: flex;
+        padding: 20px 5px;
+	}
+
+	.copyright a{
+		color: #7e4c4f;
+		text-decoration: none;
+	}
+
+	.copyright a:hover{
+		color: #999;
+	}
+
+    /**TOP BUTTON**/
+	.call-us-btn{
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+		font-size: 2em;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .call-us-btn a{
+        display: block;
+        padding: 0px;
+        color: #ca8b38;
+        border-radius: 50%;
+    }
+
+    .call-us-btn p{
+        color: #ca8b38;
+        font-size: 0.7em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .call-us-btn a:hover,
+    .call-us-btn p:hover{
+		color: #f6ab4a;
+    }
+    
+}
+
+/**▬▬▬▬ஜ۩۞۩ஜ▬▬­­­­­­­­­▬▬▬**­/
+    TABLET DEVICE
+/**▬▬▬▬ஜ۩۞۩ஜ▬▬­­­­­­­­­▬▬▬**/
+
+@media only screen and (min-width: 768px){
+    
+    /***SECTION SERVICES***/
+    .left-type{
+        padding: 3% 0 3% 3%;
+    }
+
+    .right-type{
+        padding: 3% 3% 3% 0;
+    }
+
+    .left-type .cftype{
+        border-right: 1px solid #ddd;
+    }
+
+    .cftype:nth-child(1){
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/**▬▬▬▬ஜ۩۞۩ஜ▬▬­­­­­­­­­▬▬▬**­/
+      LARGE DEVICE
+/**▬▬▬▬ஜ۩۞۩ஜ▬▬­­­­­­­­­▬▬▬**/
+
+@media only screen and (min-width: 992px){
+    .headerTitle{
+        padding: 13% 20px;
+    }
+
+    #who{
+        height: 100%;
+    }
 }
