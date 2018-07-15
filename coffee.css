@@ -636,6 +636,7 @@ body{
         padding: 0px;
         color: #ca8b38;
         border-radius: 50%;
+        animation: swing 2s ease infinite;
     }
 
     .call-us-btn p{
@@ -645,9 +646,41 @@ body{
         cursor: pointer;
     }
 
-    .call-us-btn a:hover,
-    .call-us-btn p:hover{
-		color: #f6ab4a;
+    .call-us-btn:hover a,
+    .call-us-btn:hover p{
+        color: #f6ab4a;
+        animation: flip 2s ease;
+    }
+
+    @keyframes swing {
+        20% { transform: rotate(15deg); }	
+        40% { transform: rotate(-10deg); }
+        60% { transform: rotate(5deg); }	
+        80% { transform: rotate(-5deg); }	
+        100% { transform: rotate(0deg); }
+    }
+
+    @keyframes flip {
+        0% {
+            transform: perspective(400px) rotateY(0);
+            animation-timing-function: ease-out;
+        }
+        40% {
+            transform: perspective(400px) translateZ(150px) rotateY(170deg);
+            animation-timing-function: ease-out;
+        }
+        50% {
+            transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+            animation-timing-function: ease-in;
+        }
+        80% {
+            transform: perspective(400px) rotateY(360deg) scale(.95);
+            animation-timing-function: ease-in;
+        }
+        100% {
+            transform: perspective(400px) scale(1);
+            animation-timing-function: ease-in;
+        }
     }
     
 }
